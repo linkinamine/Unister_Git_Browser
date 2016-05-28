@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Unister</string>
+    <string name="title_activity_main">Git query repos</string>
+    <string name="title_activity_details">Git repo details</string>
+    <string name="splash_name">Unister Git Query Test</string>
+
+    <string name="subscriber">Subscriber</string>
+
+
+</resources>

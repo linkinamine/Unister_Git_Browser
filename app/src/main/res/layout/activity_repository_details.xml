@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/gray_50"
+    tools:context="com.unister.gitquery.SubscribersActivity">
+
+
+    <View
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#607D8B"
+        android:fitsSystemWindows="true" />
+
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:onClick="goBack"
+        android:src="@mipmap/ic_action_back"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:id="@+id/detailsHeader"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/repository_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Repo Name"
+            android:textColor="@color/white_ish"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/subscribersCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="10dp"
+            android:alpha="0.8"
+            android:text="@string/subscriber"
+            android:textColor="@color/white_ish"
+            android:textSize="12dp"
+            android:layout_gravity="right" />
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/subscribersListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"
+        android:scrollbars="none"
+        android:paddingBottom="20dp"
+        android:paddingTop="10dp"
+        android:animateLayoutChanges="true"
+        android:layout_below="@+id/detailsHeader" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>
